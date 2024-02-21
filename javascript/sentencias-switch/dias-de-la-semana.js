@@ -21,7 +21,7 @@ switch (diaSemana) {
     case 5:
         console.log('Viernes');
         break;
-
+   
     case 6:
         console.log('Sabado');
         break;
