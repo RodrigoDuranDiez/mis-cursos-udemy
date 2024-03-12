@@ -3,9 +3,19 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mi-primera-app-angular": {
+    "mi-segunda-app-angular": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/mi-primera-app-angular",
+            "outputPath": "dist/mi-segunda-app-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "mi-primera-app-angular:build:production"
+              "buildTarget": "mi-segunda-app-angular:build:production"
             },
             "development": {
-              "buildTarget": "mi-primera-app-angular:build:development"
+              "buildTarget": "mi-segunda-app-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "mi-primera-app-angular:build"
+            "buildTarget": "mi-segunda-app-angular:build"
           }
         },
         "test": {
@@ -98,6 +108,6 @@
     }
   },
   "cli": {
-    "analytics": "1b6f4ff9-aafc-4328-998f-2bed534cce1f"
+    "analytics": "9220a0aa-1986-4c52-a555-d4ecc06e91cd"
   }
 }

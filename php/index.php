@@ -1,1 +1,5 @@
-fhhwed
+<?php
+
+echo "helloo world";
+
+?>
